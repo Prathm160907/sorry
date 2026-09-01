@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Apology ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: #4d403c;
+    font-family: "DM Sans", sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 15%,
+        rgba(255,255,255,.8),
+        transparent 28%),
+
+        radial-gradient(circle at 85% 75%,
+        rgba(239,213,201,.55),
+        transparent 30%),
+
+        linear-gradient(135deg,
+        #f8eee8,
+        #f4e6df 48%,
+        #efe0d8);
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .08;
+    z-index: 10;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+}
+
+.blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(8px);
+    pointer-events: none;
+    opacity: .28;
+}
+
+.b1 {
+    width: 180px;
+    height: 180px;
+    background: #e9c6b8;
+    top: -50px;
+    left: -50px;
+}
+
+.b2 {
+    width: 230px;
+    height: 230px;
+    background: #dcc4bd;
+    right: -80px;
+    bottom: -70px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+main {
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    min-height: 100vh;
+    padding: 70px 22px;
+
+    display: grid;
+    place-items: center;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+}
+
+.tiny {
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    font-size: 11px;
+    opacity: .62;
+}
+
+h1,
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    margin: 0;
+    color: #493b37;
+}
+
+h1 {
+    font-size: clamp(64px, 15vw, 135px);
+    line-height: .78;
+    font-weight: 600;
+}
+
+h1 span {
+    display: block;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.subtitle {
+    max-width: 520px;
+    margin: 35px auto 0;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    opacity: .78;
+}
+
+.scroll {
+    margin-top: 55px;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    color: inherit;
+    text-decoration: none;
+
+    font-size: 12px;
+    opacity: .62;
+}
+
+.arrow {
+    font-size: 20px;
+    animation: float 1.8s ease-in-out infinite;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(7px);
+    }
+}
+
+
+/* =========================
+   LETTER CARD
+========================= */
+
+.card {
+    width: min(720px, 100%);
+
+    padding: clamp(30px, 7vw, 64px);
+
+    border: 1px solid rgba(112,85,76,.12);
+    border-radius: 30px;
+
+    background: rgba(255,250,247,.58);
+
+    backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 25px 80px rgba(100,70,60,.12);
+}
+
+h2 {
+    font-size: clamp(42px, 9vw, 70px);
+    line-height: .95;
+    margin-bottom: 25px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 14px 0;
+}
+
+.letter {
+    margin-top: 28px;
+
+    padding: 25px 0;
+
+    border-top:
+        1px solid rgba(112,85,76,.13);
+
+    border-bottom:
+        1px solid rgba(112,85,76,.13);
+}
+
+.signature {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 27px;
+    font-style: italic;
+    margin-top: 28px;
+}
+
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-top: 32px;
+}
+
+.reason {
+    padding: 23px 15px;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    background: rgba(255,255,255,.42);
+
+    border:
+        1px solid rgba(112,85,76,.09);
+}
+
+.emoji {
+    font-size: 25px;
+    display: block;
+    margin-bottom: 9px;
+}
+
+.reason small {
+    line-height: 1.5;
+    opacity: .72;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button-wrap {
+    text-align: center;
+    margin-top: 38px;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+
+    padding: 16px 27px;
+
+    border-radius: 999px;
+
+    background: #73584f;
+    color: #fffaf7;
+
+    font: 500 14px "DM Sans", sans-serif;
+
+    box-shadow:
+        0 12px 30px rgba(90,65,57,.22);
+
+    transition: .25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(90,65,57,.27);
+}
+
+
+/* =========================
+   HIDDEN MESSAGE
+========================= */
+
+.hidden-note {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition: .7s ease;
+
+    text-align: center;
+}
+
+.hidden-note.open {
+    max-height: 300px;
+
+    opacity: 1;
+
+    margin-top: 25px;
+}
+
+
+/* =========================
+   FINAL SECTION
+========================= */
+
+.final {
+    text-align: center;
+}
+
+.heart {
+    width: 86px;
+    height: 86px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(255,255,255,.55);
+
+    font-size: 38px;
+
+    box-shadow:
+        0 15px 45px rgba(100,70,60,.1);
+
+    animation: pulse 2.2s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.06);
+    }
+}
+
+.final h2 {
+    font-size: clamp(52px, 10vw, 86px);
+}
+
+.footer {
+    font-size: 12px;
+    opacity: .5;
+    margin-top: 45px;
+}
+
+
+/* =========================
+   FLOATING PETALS
+========================= */
+
+.petal {
+    position: fixed;
+
+    top: -20px;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    width: 9px;
+    height: 13px;
+
+    border-radius:
+        70% 30% 70% 30%;
+
+    background:
+        rgba(196,143,128,.35);
+
+    animation:
+        fall linear forwards;
+}
+
+@keyframes fall {
+
+    to {
+        transform:
+            translate3d(var(--drift),110vh,0)
+            rotate(500deg);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .reasons {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 55px 18px;
+    }
+
+    .card {
+        border-radius: 24px;
+    }
+
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- Background effects -->
+<div class="grain"></div>
+
+<div class="blob b1"></div>
+<div class="blob b2"></div>
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div>
+
+        <div class="tiny">
+            a small corner of the internet
+        </div>
+
+        <h1>
+            I'm
+            <br>
+
+            <span>sorry</span>
+
+            <span>Bubu!!</span>
+        </h1>
+
+        <p class="subtitle">
+
+            I could have just sent you a text…
+            <br>
+
+            but you deserve a little more than that.
+
+        </p>
+
+
+        <a
+            class="scroll"
+            href="#letter"
+        >
+
+            read this
+
+            <span class="arrow">
+                ↓
+            </span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     APOLOGY LETTER
+========================= -->
+
+<section id="letter">
+
+<div class="card">
+
+    <div class="tiny">
+        dear you,
+    </div>
+
+
+    <h2>
+
+        Let me say this
+        <br>
+
+        <i>properly.</i>
+
+    </h2>
+
+
+    <div class="letter">
+
+        <p>
+
+            I'm genuinely sorry.
+
+            I know that saying "sorry"
+            doesn't magically undo anything,
+            and I'm not expecting it to.
+
+        </p>
+
+
+        <p>
+
+            I just want you to know that
+            I understand that I hurt you,
+            and I wish I had handled things
+            differently.
+
+        </p>
+
+
+        <p>
+
+            You matter to me.
+
+            Our friendship matters to me.
+
+            And if I made you feel otherwise,
+            I'm really, really sorry.
+
+        </p>
+
+
+        <p>
+
+            I don't want to make excuses.
+
+            I just want to do better —
+            and hopefully earn back the little
+            bit of trust I may have messed up.
+
+        </p>
+
+
+        <div class="signature">
+
+            — me, with a very genuine sorry ♡
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Little cards -->
+
+    <div class="reasons">
+
+
+        <div class="reason">
+
+            <span class="emoji">
+                ☕
+            </span>
+
+            <small>
+
+                no excuses,
+                <br>
+
+                just honesty
+
+            </small>
+
+        </div>
+
+
+
+        <div class="reason">
+
+            <span class="emoji">
+                🌷
+            </span>
+
+            <small>
+
+                you deserve
+                <br>
+
+                better from me
+
+            </small>
+
+        </div>
+
+
+
+        <div class="reason">
+
+            <span class="emoji">
+                🫶
+            </span>
+
+            <small>
+
+                our friendship
+                <br>
+
+                means a lot
+
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Interactive button -->
+
+    <div class="button-wrap">
+
+        <button onclick="showNote()">
+
+            one more thing...
+
+        </button>
+
+
+        <div
+            id="note"
+            class="hidden-note"
+        >
+
+            <p>
+
+                <i>
+                    Take your time.
+                    You don't have to reply right away.
+                </i>
+
+                <br>
+
+                I just needed you to know
+                that I mean this. ♡
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section>
+
+<div class="final">
+
+    <div class="heart">
+        ♡
+    </div>
+
+
+    <div class="tiny">
+
+        that's all i wanted to say
+
+    </div>
+
+
+    <h2>
+
+        I'm sorry.
+        <br>
+
+        <i>Truly.</i>
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        Whatever happens next,
+        thank you for being someone
+        <br>
+
+        worth apologising to properly.
+
+    </p>
+
+
+    <div class="footer">
+
+        made with a little too much overthinking
+        & a lot of sincerity
+
+    </div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<script>
+
+/* =========================
+   SHOW HIDDEN MESSAGE
+========================= */
+
+function showNote() {
+
+    const note =
+        document.getElementById("note");
+
+    note.classList.toggle("open");
+
+}
+
+
+
+/* =========================
+   FLOATING PETALS
+========================= */
+
+function createPetal() {
+
+    const petal =
+        document.createElement("div");
+
+    petal.className = "petal";
+
+
+    petal.style.left =
+        Math.random() * 100 + "vw";
+
+
+    petal.style.setProperty(
+        "--drift",
+        (Math.random() * 180 - 90) + "px"
+    );
+
+
+    petal.style.animationDuration =
+        (6 + Math.random() * 6) + "s";
+
+
+    petal.style.opacity =
+        .15 + Math.random() * .35;
+
+
+    document.body.appendChild(petal);
+
+
+    setTimeout(() => {
+
+        petal.remove();
+
+    }, 13000);
+
+}
+
+
+setInterval(createPetal, 650);
+
+</script>
+
+</body>
+</html>
