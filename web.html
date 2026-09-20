@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>I Love You 3000 Million Bubu 😽</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  color: #5b2341;
+  background: linear-gradient(135deg, #fff4f8, #ffd8e8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(700px, 100%);
+  text-align: center;
+  background: rgba(255,255,255,0.85);
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 28px;
+  box-shadow: 0 18px 60px rgba(170,60,110,0.18);
+}
+
+h1 {
+  font-size: clamp(2rem, 7vw, 4rem);
+  margin: 8px 0;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+}
+
+.heart {
+  font-size: 3rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.18);
+  }
+}
+
+.photo {
+  width: 100%;
+  border-radius: 22px;
+  display: block;
+  margin: 20px auto;
+  border: 5px solid white;
+  box-shadow: 0 8px 24px rgba(100,30,60,0.16);
+}
+
+.message {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+button, a {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: 13px 20px;
+  margin: 7px;
+  background: #e85d91;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover, a:hover {
+  background: #c94276;
+}
+
+#surprise {
+  display: none;
+  margin-top: 15px;
+  font-size: 1.15rem;
+}
+
+.tiny {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<main class="card">
+
+  <div class="heart">💗</div>
+
+  <h1>I Love You 3000 Million, Bubu</h1>
+
+  <div class="subtitle">
+    For my psps 😽🫶
+  </div>
+
+  <p class="message">
+    You are officially invited to receive unlimited hugs,
+    tiny kisses, forehead kisses, and very aggressive
+    <b>psps psps</b> energy.
+  </p>
+
+  <!-- Your March & December photo -->
+  <img
+    class="photo"
+    src="WhatsApp Image 2026-09-20 at 2.29.34 PM.jpeg"
+    alt="March and December kitty photo"
+  >
+
+  <p class="message">
+    March & December: two little bundles of love 🐱💕
+  </p>
+
+  <!-- Ojos Tristes -->
+  <a
+    href="https://www.youtube.com/results?search_query=Ojos+Tristes"
+    target="_blank"
+  >
+    🎵 Play Ojos Tristes
+  </a>
+
+  <!-- Virtual Hug -->
+  <button onclick="showHug()">
+    🫂 Virtual Hug
+  </button>
+
+  <div id="surprise">
+    Come here, bubu. Tightest hug ever. 😽💗
+  </div>
+
+  <div class="tiny">
+    Made with love, pink hearts, and psps psps.
+  </div>
+
+</main>
+
+<script>
+function showHug() {
+  document.getElementById("surprise").style.display = "block";
+}
+</script>
+
+</body>
+</html>
